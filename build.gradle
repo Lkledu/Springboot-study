@@ -19,13 +19,15 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-quartz'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation('org.springframework.boot:spring-boot-starter-jpa'){
-		because 'i want to add JPA'
+	implementation ('org.springframework.boot:spring-boot-starter-quartz'){
+		because 'The project will use scheduling processment'
 	}
-	testImplementation('org.apache.derby:derby'){
-		because 'the database that i will use'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation ('org.springframework.boot:spring-boot-starter-data-jpa'){
+		because 'The project will use JPA to acess data'
+	}
+	implementation ('org.apache.derby:derby'){
+		because 'it\'s a small database that allows prototipation '
 	}
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
