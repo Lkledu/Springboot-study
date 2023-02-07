@@ -29,6 +29,9 @@ dependencies {
 	implementation ('org.apache.derby:derby'){
 		because 'it\'s a small database that allows prototipation '
 	}
+	implementation ('org.springframework.boot:spring-boot-starter-actuator'){
+		because 'it will enable monitoring features'
+	}
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
